@@ -6,21 +6,26 @@ import 'aos/dist/aos.css';
 const HomeSlider = () => {
   const slides = [
     {
-      "image": "https://themecraze.net/demos/html/lirive/images/main-slider/1.jpg",
-      "heading": "Find Your Dream Home",
-      "title": "Explore Real Estate Opportunities"
+      image: "https://themecraze.net/demos/html/lirive/images/main-slider/1.jpg",
+      heading: "Rent Your Dream Home",
+      title: "Find Your Perfect Rental Property",
+      button: "Rent Now",
     },
     {
-      "image": "https://plus.unsplash.com/premium_photo-1661930527039-f809e14b8102?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVhbCUyMGVzdGF0ZSUyMHNsaWRlciUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60",
-      "heading": "Discover Your Perfect Property",
-      "title": "Unlock Real Estate Possibilities"
+      image: "https://plus.unsplash.com/premium_photo-1661930527039-f809e14b8102?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVhbCUyMGVzdGF0ZSUyMHNsaWRlciUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60",
+      heading: "Find Your Dream Home for Sale",
+      title: "Discover Your Perfect Property for Sale",
+      button: "Buy Now",
     },
     {
-      "image": "https://themecraze.net/demos/html/lirive/images/main-slider/3.jpg",
-      "heading": "Invest in Real Estate",
-      "title": "Don't Miss Out on Lucrative Opportunities"
-    }
+      image: "https://themecraze.net/demos/html/lirive/images/main-slider/3.jpg",
+      heading: "Invest in Real Estate",
+      title: "Don't Miss Out on Lucrative Opportunities",
+      button: "Invest Now",
+    },
   ];
+
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animationIndex, setAnimationIndex] = useState(0);
@@ -88,16 +93,16 @@ const HomeSlider = () => {
             data-aos={animationIndex === 0 ? 'fade-up' : animationIndex === 1 ? 'fade-down' : 'fade-right'}
             data-aos-delay="1500"
           >
-            Explore Properties
+              {slides[currentIndex].button}
           </button>
 
         </div>
         {/* Left Arrow */}
-        <div className="hidden z-10 group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </div>
         {/* Right Arrow */}
-        <div className="hidden z-10 group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactRight onClick={nextSlide} size={30} />
         </div>
       </div>

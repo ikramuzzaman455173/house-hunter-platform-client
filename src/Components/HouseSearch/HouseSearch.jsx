@@ -10,7 +10,6 @@ const HouseSearch = () => {
   const [availability, setAvailability] = useState('Available');
   const [rentPerMonth, setRentPerMonth] = useState('');
   const [houses, setHouses] = useState([]);
-
   // list of some bangladesh cityes
   const bangladeshiCities = ['Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi', 'Khulna'];
 
@@ -18,17 +17,21 @@ const HouseSearch = () => {
   const priceRanges = ['0-500', '500-1000', '1000-1500', '1500-2000', '2000+'];
 
   useEffect(() => {
-    fetchHouses();
+    // fetchHouses();
+      fetch("/public/houseData.json").then(response => response.json()).then(data => {
+        console.log(data)
+        setHouses(data)
+      }).catch(error=>console.log(`404 page not found ${error}`))
   }, []);
 
-  const fetchHouses = async () => {
-    try {
-      const response = await axios.get('/api/houses');
-      setHouses(response.data);
-    } catch (error) {
-      console.log('Error fetching houses:', error);
-    }
-  };
+  // const fetchHouses = async () => {
+  //   try {
+  //     const response = await axios.get('/api/houses');
+  //     setHouses(response.data);
+  //   } catch (error) {
+  //     console.log('Error fetching houses:', error);
+  //   }
+  // };
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -48,6 +51,9 @@ const HouseSearch = () => {
       console.log('Error searching houses:', error);
     }
   };
+
+  console.log({houses});
+
 
   return (
     <>
@@ -133,7 +139,7 @@ const HouseSearch = () => {
           </form>
           <div>
             <h3 className="text-xl mb-2">Search Results:</h3>
-            {houses.map((house) => (
+            {houses?.houses?.map((house) => (
               <div key={house.id} className="border p-4 mb-4">
                 <h4 className="text-lg mb-2">{house.title}</h4>
                 <p>City: {house.city}</p>
