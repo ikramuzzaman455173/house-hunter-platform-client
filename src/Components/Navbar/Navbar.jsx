@@ -29,8 +29,8 @@ const NavBar = () => {
     };
   }, []);
   return (
-    <div className='shadow-md w-full fixed z-10 top-0 left-0'>
-      <div className='md:flex items-center justify-between bg-[#eef9f9] py-4 md:px-10 px-7'>
+    <div className='shadow-md w-full fixed top-0 left-0 z-10 bg-[#eef9f9]'>
+      <div className='md:flex items-center justify-between py-4 md:mb-0 md:px-10 px-7'>
         {/* logo section */}
         <Link to='/'>
           <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
@@ -44,7 +44,7 @@ const NavBar = () => {
           {open ? <XMarkIcon /> : <Bars3BottomRightIcon />}
         </div>
         {/* link items */}
-        <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#eef9f9] absolute md:static md:z-auto z-20 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
+        <ul className={`md:flex md:items-center md:pb-0 pb-12 bg-[#eef9f9] absolute md:static md:z-auto left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-[4rem]' : 'top-[-490px]'}`}>
           {Links.map((link) => (
             <li key={link.name} className='md:ml-8 md:my-0 my-7 font-semibold'>
               <NavLink to={link.link} className={({ isActive }) => isActive ? 'active active-style' : 'default'}>{link.name}</NavLink>
