@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "daisyui": "^2.51.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
@@ -17,6 +19,7 @@
     "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.10.0",
     "react-toastify": "^9.1.2",
+    "react-tooltip": "^5.18.0",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.7.5"
   },
