@@ -5,6 +5,8 @@ import './index.css'
 import './style.css'
 import MainLayout from './Layout/MainLayout'
 import HomePage from './Pages/Home/HomePage'
+import Login from './Components/Login/Login'
+import SignUp from './Components/Register/Register'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +16,14 @@ const router = createBrowserRouter([
       {
         path: '/',
         element:<HomePage/>
+      },
+      {
+        path: 'login',
+        element:<Login/>
+      },
+      {
+        path: 'signup',
+        element:<SignUp/>
       }
     ]
   },
