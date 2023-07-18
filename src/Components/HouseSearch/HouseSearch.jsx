@@ -3,7 +3,7 @@ import axios from 'axios';
 import Container from '../SharedComponents/Container';
 import Heading from '../SharedComponents/Heading';
 import House from '../Houses/House';
-
+import moment from 'moment';
 const HouseSearch = () => {
   const [city, setCity] = useState('Dhaka');
   const [bedrooms, setBedrooms] = useState('2');
@@ -107,19 +107,33 @@ const HouseSearch = () => {
                 className="border p-2 rounded mr-2"
               >
                 <option value="">Select Room Size</option>
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-                <option value="Extra Large">Extra Large</option>
+                <option value="550">550</option>
+                <option value="600">600</option>
+                <option value="950">950</option>
+                <option value="1000">1000</option>
+                <option value="1400">1400</option>
+                <option value="1500">1500</option>
+                <option value="1800">1800</option>
+                <option value="2000">2000</option>
               </select>
               <select
                 value={availability}
                 onChange={(e) => setAvailability(e.target.value)}
                 className="border p-2 rounded mr-2"
               >
-                <option value="">Select Availability</option>
-                <option value="Available">Available</option>
-                <option value="Occupied">Occupied</option>
+                <option value="">Select Availability Date</option>
+                <option value="2023-08-10">{moment('2023-08-10').format('MMM Do YY')}</option>
+                <option value="2023-08-11">{moment('2023-08-11').format('MMM Do YY')}</option>
+                <option value="2023-08-12">{moment('2023-08-12').format('MMM Do YY')}</option>
+                <option value="2023-08-13">{moment('2023-08-13').format('MMM Do YY')}</option>
+                <option value="2023-08-14">{moment('2023-08-14').format('MMM Do YY')}</option>
+                <option value="2023-08-15">{moment('2023-08-15').format('MMM Do YY')}</option>
+                <option value="2023-08-16">{moment('2023-08-16').format('MMM Do YY')}</option>
+                <option value="2023-08-17">{moment('2023-08-17').format('MMM Do YY')}</option>
+                <option value="2023-08-18">{moment('2023-08-18').format('MMM Do YY')}</option>
+                <option value="2023-08-19">{moment('2023-08-19').format('MMM Do YY')}</option>
+                <option value="2023-08-20">{moment('2023-08-20').format('MMM Do YY')}</option>
+
               </select>
               <select
                 value={rentPerMonth}

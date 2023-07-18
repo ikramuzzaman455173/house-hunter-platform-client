@@ -1,13 +1,13 @@
 import React from 'react'
 import HeartButton from '../Button/HeartButton'
 // import { Link } from 'react-router-dom'
-
+import moment from 'moment';
 const House = ({ item }) => {
   const { name, address, city, bedrooms, bathrooms, roomSize, picture, availabilityDate, rentPerMonth, phoneNumber, description } = item || {}
   return (
     // <Link to={`room/${1}`}>
     <div className='col-span-1 cursor-pointer group'>
-      <div className='flex flex-col gap-2 w-full border-2 p-3 rounded-md shadow bg-white'>
+      <div className='flex flex-col gap-2 w-full border-2 p-3 rounded-md shadow bg-white h-full'>
         <div
           className='
             aspect-square
@@ -38,7 +38,10 @@ const House = ({ item }) => {
             <HeartButton />
           </div>
         </div>
-        <div className='font-semibold text-lg'>{name}</div>
+        <div className='font-semibold text-lg flex justify-between'>
+          <p>{name}</p>
+          <p className='text-slate-600'>{moment(availabilityDate).format("MMM Do YY")}</p>
+        </div>
         <div className='font-light text-neutral-500 flex justify-between'>
           <p>{city}</p>
           <p>{address}</p>
@@ -49,11 +52,11 @@ const House = ({ item }) => {
         </div>
         <div className='flex flex-row items-center justify-between gap-1'>
           <div className='font-semibold'>$ {rentPerMonth}</div>
-          <div className='font-light'>{roomSize}</div>
+          <div className='font-light mb-4'>{roomSize}</div>
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white px-10 py-2 rounded mt-5  awesome-btn"
+          className="bg-blue-500 text-white px-10 py-2 rounded mt-auto awesome-btn"
         >
           Booking
         </button>

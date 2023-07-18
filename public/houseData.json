@@ -9,7 +9,7 @@
       "bathrooms": 2,
       "roomSize": "1500 sqft",
       "picture": "https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVudCUyMGhvdXNlfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60",
-      "availabilityDate": "2023-08-01",
+      "availabilityDate": "2023-08-10",
       "rentPerMonth": 1500,
       "phoneNumber": "+8801712345678",
       "description": "Spacious house with a beautiful garden."
@@ -24,7 +24,7 @@
       "bathrooms": 1,
       "roomSize": "1000 sqft",
       "picture": "https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHJlbnQlMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      "availabilityDate": "2023-07-25",
+      "availabilityDate": "2023-08-11",
       "rentPerMonth": 1200,
       "phoneNumber": "+8801812345678",
       "description": "Cozy house in a quiet neighborhood."
@@ -39,7 +39,7 @@
       "bathrooms": 3,
       "roomSize": "2000 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-746919020186561409/original/98f1a8c7-a263-46a8-8757-1f5d9d39f8bb.jpeg?im_w=320",
-      "availabilityDate": "2023-08-15",
+      "availabilityDate": "2023-08-12",
       "rentPerMonth": 1800,
       "phoneNumber": "+8801912345678",
       "description": "Modern house with stunning views of the hills."
@@ -54,7 +54,7 @@
       "bathrooms": 2,
       "roomSize": "1600 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-814937613380365669/original/7ee4b2be-ec19-4f57-bf2d-fe459b3b79cb.jpeg?im_w=320",
-      "availabilityDate": "2023-07-30",
+      "availabilityDate": "2023-08-13",
       "rentPerMonth": 1400,
       "phoneNumber": "+8801612345678",
       "description": "Well-maintained house with a spacious backyard."
@@ -69,7 +69,7 @@
       "bathrooms": 1,
       "roomSize": "950 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-45076629/original/0d4e80ac-b1b4-44d1-ab2f-10c67c1e8e2a.jpeg?im_w=320",
-      "availabilityDate": "2023-08-05",
+      "availabilityDate": "2023-08-14",
       "rentPerMonth": 1200,
       "phoneNumber": "+8801512345678",
       "description": "Affordable house in a convenient location."
@@ -84,7 +84,7 @@
       "bathrooms": 1,
       "roomSize": "600 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-761521121343082881/original/d334c373-bf21-4fce-aff6-0dc085f7bd28.jpeg?im_w=320",
-      "availabilityDate": "2023-08-10",
+      "availabilityDate": "2023-08-15",
       "rentPerMonth": 900,
       "phoneNumber": "+8801212345678",
       "description": "Compact house perfect for singles or couples."
@@ -99,7 +99,7 @@
       "bathrooms": 2,
       "roomSize": "1500 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-754944155491608444/original/29df9205-969b-4b16-875a-dde8c681133c.jpeg?im_w=320",
-      "availabilityDate": "2023-07-28",
+      "availabilityDate": "2023-08-16",
       "rentPerMonth": 1400,
       "phoneNumber": "+8801312345678",
       "description": "Spacious house with a backyard garden and pool."
@@ -114,7 +114,7 @@
       "bathrooms": 3,
       "roomSize": "1800 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-53505989/original/607235e0-45d3-4450-b507-b9b0477d68d9.jpeg?im_w=320",
-      "availabilityDate": "2023-08-20",
+      "availabilityDate": "2023-08-17",
       "rentPerMonth": 1600,
       "phoneNumber": "+8801412345678",
       "description": "Elegant house in a gated community."
@@ -129,7 +129,7 @@
       "bathrooms": 1,
       "roomSize": "1000 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-566028065891205462/original/8272f279-b785-4533-b9e5-b400a37d6a52.jpeg?im_w=320",
-      "availabilityDate": "2023-07-29",
+      "availabilityDate": "2023-08-18",
       "rentPerMonth": 1200,
       "phoneNumber": "+8801012345678",
       "description": "Renovated house with modern amenities."
@@ -144,7 +144,7 @@
       "bathrooms": 2,
       "roomSize": "1400 sqft",
       "picture": "https://a0.muscache.com/im/pictures/23de78a6-9b6e-4e49-9b49-9373fa0b3394.jpg?im_w=320",
-      "availabilityDate": "2023-08-03",
+      "availabilityDate": "2023-08-19",
       "rentPerMonth": 1400,
       "phoneNumber": "+8801912345678",
       "description": "Comfortable house in a family-friendly neighborhood."
@@ -159,7 +159,7 @@
       "bathrooms": 3,
       "roomSize": "1800 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-604855093626546308/original/e87a6018-10e5-488b-a7f7-cddca3f63baf.jpeg?im_w=320",
-      "availabilityDate": "2023-08-12",
+      "availabilityDate": "2023-08-20",
       "rentPerMonth": 1600,
       "phoneNumber": "+8801712345678",
       "description": "Spacious house with a garden."
@@ -174,7 +174,7 @@
       "bathrooms": 1,
       "roomSize": "950 sqft",
       "picture": "https://a0.muscache.com/im/pictures/a71562ca-bb0e-425d-b33f-e397617159e8.jpg?im_w=320",
-      "availabilityDate": "2023-07-22",
+      "availabilityDate": "2023-08-10",
       "rentPerMonth": 550,
       "phoneNumber": "+8801812345678",
       "description": "Cozy house in a residential area."
@@ -189,7 +189,7 @@
       "bathrooms": 2,
       "roomSize": "1600 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-601151987007361433/original/f8c248ea-0837-4190-ad9e-3ba9aa14bf16.jpeg?im_w=320",
-      "availabilityDate": "2023-08-18",
+      "availabilityDate": "2023-08-11",
       "rentPerMonth": 1400,
       "phoneNumber": "+8801912345678",
       "description": "Modern house with a spacious backyard."
@@ -204,7 +204,7 @@
       "bathrooms": 1,
       "roomSize": "950 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-35135310/original/2d1de7f3-28d2-4bfb-9db3-fb9a29624a74.jpeg?im_w=320",
-      "availabilityDate": "2023-07-26",
+      "availabilityDate": "2023-08-12",
       "rentPerMonth": 1200,
       "phoneNumber": "+8801612345678",
       "description": "Cozy house with a small garden."
@@ -219,7 +219,7 @@
       "bathrooms": 1,
       "roomSize": "950 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-737321776435238669/original/ab3ac963-af4d-4972-ab9e-dc51c80b0a97.jpeg?im_w=320",
-      "availabilityDate": "2023-08-08",
+      "availabilityDate": "2023-08-13",
       "rentPerMonth": 950,
       "phoneNumber": "+8801512345678",
       "description": "Affordable house in a central location."
@@ -249,7 +249,7 @@
       "bathrooms": 1,
       "roomSize": "1200 sqft",
       "picture": "https://a0.muscache.com/im/pictures/27886603-c2f3-4ce6-abde-d4ad89a765c2.jpg?im_w=320",
-      "availabilityDate": "2023-07-24",
+      "availabilityDate": "2023-08-15",
       "rentPerMonth": 1200,
       "phoneNumber": "+8801312345678",
       "description": "Cozy house with a backyard garden."
@@ -264,7 +264,7 @@
       "bathrooms": 2,
       "roomSize": "1500 sqft",
       "picture": "https://a0.muscache.com/im/pictures/7c706ab5-bd25-4b46-8eab-c8458cd63326.jpg?im_w=320",
-      "availabilityDate": "2023-08-22",
+      "availabilityDate": "2023-08-16",
       "rentPerMonth": 1400,
       "phoneNumber": "+8801412345678",
       "description": "Well-maintained house in a quiet neighborhood."
@@ -279,7 +279,7 @@
       "bathrooms": 1,
       "roomSize": "950 sqft",
       "picture": "https://a0.muscache.com/im/pictures/prohost-api/Hosting-46761225/original/11058c0d-fac8-4035-8f16-8b3abe7441cd.jpeg?im_w=320",
-      "availabilityDate": "2023-07-31",
+      "availabilityDate": "2023-08-17",
       "rentPerMonth": 1200,
       "phoneNumber": "+8801012345678",
       "description": "Cozy house in a residential area."
@@ -294,7 +294,7 @@
       "bathrooms": 2,
       "roomSize": "1400 sqft",
       "picture": "https://a0.muscache.com/im/pictures/4a5c629b-9c92-450e-8d8f-995875798838.jpg?im_w=320",
-      "availabilityDate": "2023-08-05",
+      "availabilityDate": "2023-08-18",
       "rentPerMonth": 1200,
       "phoneNumber": "+8801912345678",
       "description": "Comfortable house in a residential area."
@@ -309,7 +309,7 @@
       "bathrooms": 1,
       "roomSize": "1200 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-826026275336075487/original/eece08d6-6178-4c4b-855a-d3440889bbd9.jpeg?im_w=320",
-      "availabilityDate": "2023-08-18",
+      "availabilityDate": "2023-08-19",
       "rentPerMonth": 1400,
       "phoneNumber": "+8801712345678",
       "description": "Cozy house with a balcony."
@@ -324,7 +324,7 @@
       "bathrooms": 2,
       "roomSize": "1500 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-668146487515150072/original/8ff2a532-e0cd-41a2-9164-554c4d9eb28a.jpeg?im_w=320",
-      "availabilityDate": "2023-08-25",
+      "availabilityDate": "2023-08-20",
       "rentPerMonth": 1400,
       "phoneNumber": "+8801812345678",
       "description": "Spacious house in a residential area."
@@ -339,7 +339,7 @@
       "bathrooms": 3,
       "roomSize": "1800 sqft",
       "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/ef5464ea-5eb8-426a-a097-a4ed7a395610.jpeg?im_w=320",
-      "availabilityDate": "2023-09-02",
+      "availabilityDate": "2023-08-11",
       "rentPerMonth": 1600,
       "phoneNumber": "+8801912345678",
       "description": "Modern house with a backyard garden."
@@ -354,7 +354,7 @@
       "bathrooms": 2,
       "roomSize": "1500 sqft",
       "picture": "https://a0.muscache.com/im/pictures/de7c5a34-ad95-4793-aae2-6f0317147438.jpg?im_w=320",
-      "availabilityDate": "2023-08-28",
+      "availabilityDate": "2023-08-12",
       "rentPerMonth": 1400,
       "phoneNumber": "+8801612345678",
       "description": "Well-maintained house in a quiet neighborhood."
