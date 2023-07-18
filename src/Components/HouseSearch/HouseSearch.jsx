@@ -60,7 +60,7 @@ const HouseSearch = () => {
   return (
     <>
       <Container>
-        <div className="mx-auto p-4">
+        <div className="mx-auto p-4 lg:mb-0 relative md:top-10 -top-[75px]">
           <h2 className="text-2xl mb-4">House Search</h2>
           <form onSubmit={handleSearch} className="mb-4">
             <div className='flex md:flex-row flex-col flex-wrap gap-2 justify-between'>

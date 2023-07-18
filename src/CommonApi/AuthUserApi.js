@@ -4,7 +4,7 @@ export const savedUser =(user,image) => {
   const currentUser = {
     email: user.email,
     name: user.name||user.displayName,
-    role: 'user',
+    role: 'renter',
     image,
     phoneNumber:user.mobile||user.phoneNumber
   }
