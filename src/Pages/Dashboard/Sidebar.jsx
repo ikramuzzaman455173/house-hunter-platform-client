@@ -5,6 +5,7 @@ import { GrLogout } from 'react-icons/gr'
 import { FcSettings } from 'react-icons/fc'
 import UseAuth from '../../Providers/UseAuth';
 import Logo from '../../Components/SharedComponents/Logo';
+import RenterDashboardNavLinks from './RenterDashboard';
 
 const Sidebar = () => {
   const navigate = useNavigate()
@@ -22,6 +23,7 @@ const Sidebar = () => {
   // const currentUser = allUsers?.find(users => users?.email === user?.email)
   // console.log(currentUser,'currentUser');
   // console.log('allUsers',allUsers);
+  let currentUser={role:'renter'}
   return (
     <>
       {/* Small Screen Navbar */}
@@ -65,7 +67,7 @@ const Sidebar = () => {
                 </h4>
               </div>
               <Link to='/dashboard'>
-                <p className='mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-white  hover:underline'>
+                <p className='mx-2 mt-1 text-sm font-medium lowercase text-gray-600 dark:text-white  hover:underline'>
                   {user?.email}
                 </p>
               </Link>
@@ -73,13 +75,13 @@ const Sidebar = () => {
           </div>
 
           {/* Nav Items */}
-          {/* <div className='flex flex-col justify-between flex-1 mt-6'>
+          <div className='flex flex-col justify-between flex-1 mt-6'>
             <nav>
-              {currentUser?.role === 'user' && <StudentDashboardNabLinks />}
-              {currentUser?.role === 'instructor' &&<InstructorDashboardNabLinks />}
-              {currentUser?.role === 'admin' &&<AdminDashboardNavLinks />}
+              {currentUser?.role === 'renter' && <RenterDashboardNavLinks />}
+              {/* {currentUser?.role === 'instructor' &&<InstructorDashboardNabLinks />}
+              {currentUser?.role === 'admin' &&<AdminDashboardNavLinks />} */}
             </nav>
-          </div> */}
+          </div>
         </div>
 
         <div>

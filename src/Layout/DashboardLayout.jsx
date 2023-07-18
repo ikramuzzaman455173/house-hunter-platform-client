@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Sidebar from '../Pages/Home/Sidebar';
+import Sidebar from '../Pages/Dashboard/Sidebar';
 import UseAuth from '../Providers/UseAuth';
 import LoadingSpinner from '../Components/SharedComponents/LoadingSpinner';
 
