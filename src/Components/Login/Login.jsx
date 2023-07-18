@@ -9,7 +9,7 @@ import UseAuth from "../../Providers/UseAuth";
 import { savedUser } from "../../CommonApi/AuthUserApi";
 const Login = () => {
   const { loading, setLoading, signIn, user } = UseAuth()
-  console.log({user});
+  console.log({ user });
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -25,7 +25,7 @@ const Login = () => {
       .then(result => {
         // console.log(result.user);
         // save user to db
-        savedUser(result.user, result.user.photoURL)
+        savedUser(result.user, result.user.photoURL,mobile)
         toast('LogIn Account Successfully !!!', { autoClose: 2000 })
         setTimeout(() => {
           navigate(from, { replace: true })
@@ -73,6 +73,7 @@ const Login = () => {
                 data-temp-mail-org='0'
               />
             </div>
+
             <div className='relative'>
               <div className='flex justify-between'>
                 <label htmlFor='password' className='text-sm mb-2'>
@@ -115,7 +116,7 @@ const Login = () => {
           Don't have an account yet?{' '}
           <Link
             to='/signup'
-            className='hover:underline hover:text-info dark:hover:text-rose-500 dark:text-[#ddd] text-slate-600'
+            className='hover:underline hover:text-rose-500 dark:hover:text-rose-500 dark:text-[#ddd] text-slate-600'
           >
             Sign up
           </Link>

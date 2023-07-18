@@ -124,10 +124,10 @@ const SignUp = () => {
               <input
                 type='text' required
                 {...register('mobile', {
-                  required: 'Mobile Number is required.',
+                  required: 'Only BD Mobile Number is required.',
                   validate: validateMobileNumber,
                 })}
-                placeholder='Enter Your Mobile Number Here'
+                placeholder='+880'
                 className='w-full px-3 py-2 border rounded-md border-gray-300 font-[500] focus:outline-info dark:focus:outline-rose-500 bg-gray-200 text-slate-600'
               />
               {errors.mobile && (
@@ -218,7 +218,7 @@ const SignUp = () => {
           Already have an account?{' '}
           <Link
             to='/login'
-            className='hover:underline  hover:text-info dark:hover:text-rose-500 dark:text-[#ddd] text-slate-600'
+            className='hover:underline  hover:text-rose-500 dark:hover:text-rose-500 dark:text-[#ddd] text-slate-600'
           >
             Login
           </Link>
