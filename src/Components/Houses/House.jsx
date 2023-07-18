@@ -7,7 +7,7 @@ const House = ({ item }) => {
   return (
     // <Link to={`room/${1}`}>
     <div className='col-span-1 cursor-pointer group'>
-      <div className='flex flex-col gap-2 w-full border-2 p-3 rounded-md shadow'>
+      <div className='flex flex-col gap-2 w-full border-2 p-3 rounded-md shadow bg-white'>
         <div
           className='
             aspect-square
