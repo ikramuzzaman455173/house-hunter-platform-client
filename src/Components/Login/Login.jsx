@@ -7,7 +7,6 @@ import { useForm } from 'react-hook-form'
 import { Helmet } from "react-helmet-async";
 import UseAuth from "../../Providers/UseAuth";
 import { savedUser } from "../../CommonApi/AuthUserApi";
-import HandleGoogle from "../SharedComponents/HandleGoogle";
 const Login = () => {
   const { loading, setLoading, signIn } = UseAuth()
   const navigate = useNavigate()
@@ -110,7 +109,6 @@ const Login = () => {
           </p>
           <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
         </div>
-        <HandleGoogle />
         <p className='px-6 text-sm text-center text-gray-400 dark:text-white'>
           Don't have an account yet?{' '}
           <Link

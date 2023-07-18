@@ -6,6 +6,8 @@ import { toast } from 'react-toastify'
 import { Helmet } from 'react-helmet-async'
 import UseAuth from '../../Providers/UseAuth'
 import { savedUser } from '../../CommonApi/AuthUserApi'
+import PasswordHideShow2 from '../SharedComponents/PasswordHIdeShow2'
+import PasswordHideShow from '../SharedComponents/PasswordHideShow'
 
 const SignUp = () => {
   const { createUser, updateUserProfile, loading, setLoading } = UseAuth()
@@ -62,6 +64,11 @@ const SignUp = () => {
   const handleShowConfirmPass = () => {
     setcpasswordshow(!cpasswordshow)
   }
+  // Custom validation function for Bangladeshi phone numbers
+  const validateMobileNumber = (value) => {
+    const regex = /^(\+?88)?01[3-9]\d{8}$/; // Regex for Bangladeshi phone numbers
+    return regex.test(value) || 'Invalid mobile number';
+  };
 
   return (
     <div className='flex justify-center items-center min-h-screen mt-5'>
@@ -108,6 +115,25 @@ const SignUp = () => {
                 data-temp-mail-org='0'
               />
             </div>
+
+            <div>
+              <label htmlFor='mobile' className='block mb-2 text-sm'>
+                Mobile Number
+              </label>
+              <input
+                type='text' required
+                {...register('mobile', {
+                  required: 'Mobile Number is required.',
+                  validate: validateMobileNumber,
+                })}
+                placeholder='Enter Your Mobile Number Here'
+                className='w-full px-3 py-2 border rounded-md border-gray-300 font-[500] focus:outline-info dark:focus:outline-rose-500 bg-gray-200 text-slate-600'
+              />
+              {errors.mobile && (
+                <p className='text-red-500'>{errors.mobile.message}</p>
+              )}
+            </div>
+
             <div className='relative'>
               <div className='flex justify-between'>
                 <label htmlFor='password' className='text-sm mb-2'>
@@ -187,7 +213,6 @@ const SignUp = () => {
           </p>
           <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
         </div>
-        <HandleGoogle />
         <p className='px-6 text-sm text-center text-slate-500 dark:text-white'>
           Already have an account?{' '}
           <Link
