@@ -12,7 +12,7 @@ const Footer = () => {
             <h1 className="text-xl font-semibold tracking-tight md:mx-3 xl:text-2xl">Subscribe our newsletter to get update.</h1>
 
             <div className="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
-              <Link to='/register' className="inline-flex items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-accent rounded-lg gap-x-3 hover:bg-neutral focus:ring focus:ring-gray-300 focus:ring-opacity-80 cursor-pointer">
+              <Link to='/signup' className="inline-flex items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-accent rounded-lg gap-x-3 hover:bg-neutral focus:ring focus:ring-gray-300 focus:ring-opacity-80 cursor-pointer">
                 <span>Sign Up Now</span>
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">

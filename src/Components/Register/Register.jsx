@@ -15,9 +15,8 @@ const SignUp = () => {
   const [passwordshow, setPasswordshow] = useState(true)
   const [cpasswordshow, setcpasswordshow] = useState(true)
   const { register, handleSubmit, formState: { errors }, watch, } = useForm()
-
+  const [loading, setLoading] = useState(false) // Add loading state
   const onSubmit = async (data) => {
-    // console.log(data, 'data');
     try {
       setLoading(true)
       const imageFile = data.image[0]
@@ -32,17 +31,11 @@ const SignUp = () => {
 
       const result = await response.json()
       const imageUrl = result.data.url
-      const user = await createUser(data.email, data.password)
-      if (user) {
-        await updateUserProfile(data.name, imageUrl)
-        setLoading(false)
-        // console.log(`Sign Up Successfully !!!`);
-        toast(`Sign Up Successfully !!!`, { autoClose: 2000 });
-        savedUser(data, imageUrl)
-        setTimeout(() => {
-          navigate(from, { replace: true })
-        }, 3000);
-      }
+
+
+
+
+
     } catch (error) {
       console.error('Image upload error:', error)
       toast.error(error.message)
@@ -50,7 +43,6 @@ const SignUp = () => {
     } finally {
       setLoading(false)
     }
-
   }
 
   const handleShowPassowrd = () => {
@@ -163,16 +155,27 @@ const SignUp = () => {
           </div>
 
           <div>
-            <button
+            {/* <button
               type='submit'
               className='bg-info dark:bg-rose-500 awesome-btn w-full text-center rounded-md py-3 text-white'
             >
-              {/* {loading ? (
+              {loading ? (
                 <TbFidgetSpinner size={24} className='m-auto animate-spin' />
               ) : (
                 'Continue'
-              )} */}
-              Continue
+              )}
+
+            </button> */}
+            <button
+              type='submit'
+              className='bg-info dark:bg-rose-500 awesome-btn w-full text-center rounded-md py-3 text-white'
+              disabled={loading} // Disable button when loading
+            >
+              {loading ? ( // Show loading spinner or 'Continue' button text
+                <TbFidgetSpinner size={24} className='m-auto animate-spin' />
+              ) : (
+                'Continue'
+              )}
             </button>
           </div>
         </form>
