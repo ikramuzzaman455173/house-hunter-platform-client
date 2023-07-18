@@ -8,7 +8,7 @@ export const savedUser =(user,image) => {
     image,
   }
   // console.log(currentUser,'currentuser');
-  fetch(``, {
+  fetch(`${import.meta.env.server_url}/users`, {
     method: 'POST',
     headers: {
       'content-type':'application/json'
@@ -17,6 +17,6 @@ export const savedUser =(user,image) => {
   })
     .then(response => response.json())
     .then(data => {
-      // console.log(data)
+      console.log(data)
     }).catch(error=>console.log(`404 page not found ${error}`))
 }

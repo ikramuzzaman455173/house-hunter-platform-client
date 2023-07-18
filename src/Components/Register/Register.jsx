@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import PasswordHideShow from '../SharedComponents/PasswordHideShow'
 import { TbFidgetSpinner } from 'react-icons/tb'
 import { useForm } from 'react-hook-form'
-import PasswordHideShow2 from '../SharedComponents/PasswordHIdeShow2'
 import { toast } from 'react-toastify'
+import { Helmet } from 'react-helmet-async'
+import UseAuth from '../../Providers/UseAuth'
+import { savedUser } from '../../CommonApi/AuthUserApi'
 
 const SignUp = () => {
+  const { createUser, updateUserProfile, loading, setLoading } = UseAuth()
   const navigate = useNavigate()
   const location = useLocation()
   const from = location.state?.from?.pathname || '/'
@@ -15,8 +17,9 @@ const SignUp = () => {
   const [passwordshow, setPasswordshow] = useState(true)
   const [cpasswordshow, setcpasswordshow] = useState(true)
   const { register, handleSubmit, formState: { errors }, watch, } = useForm()
-  const [loading, setLoading] = useState(false) // Add loading state
+
   const onSubmit = async (data) => {
+    // console.log(data, 'data');
     try {
       setLoading(true)
       const imageFile = data.image[0]
@@ -31,11 +34,17 @@ const SignUp = () => {
 
       const result = await response.json()
       const imageUrl = result.data.url
-
-
-
-
-
+      const user = await createUser(data.email, data.password)
+      if (user) {
+        await updateUserProfile(data.name, imageUrl)
+        setLoading(false)
+        // console.log(`Sign Up Successfully !!!`);
+        toast(`Sign Up Successfully !!!`, { autoClose: 2000 });
+        savedUser(data, imageUrl)
+        setTimeout(() => {
+          navigate(from, { replace: true })
+        }, 3000);
+      }
     } catch (error) {
       console.error('Image upload error:', error)
       toast.error(error.message)
@@ -43,6 +52,7 @@ const SignUp = () => {
     } finally {
       setLoading(false)
     }
+
   }
 
   const handleShowPassowrd = () => {
@@ -55,7 +65,10 @@ const SignUp = () => {
 
   return (
     <div className='flex justify-center items-center min-h-screen mt-5'>
-      <div className='flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-white shadow-md border-rose-500 dark:border-info border-2 text-slate-600'>
+      <Helmet>
+        <title>Music School || SignUp Page</title>
+      </Helmet>
+      <div className='flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-white shadow-md border-rose-500 dark:border-info border-2 text-slate-600  dark:bg-gradient-to-r dark:from-[#010314] dark:to-[#0f0728] dark:text-white dark:border-2'>
         <div className='mb-8 text-center'>
           <h1 className='my-3 text-4xl font-bold dark:font-Merienda font-Pt'>Sign Up</h1>
         </div>
@@ -155,23 +168,11 @@ const SignUp = () => {
           </div>
 
           <div>
-            {/* <button
-              type='submit'
-              className='bg-info dark:bg-rose-500 awesome-btn w-full text-center rounded-md py-3 text-white'
-            >
-              {loading ? (
-                <TbFidgetSpinner size={24} className='m-auto animate-spin' />
-              ) : (
-                'Continue'
-              )}
-
-            </button> */}
             <button
               type='submit'
-              className='bg-info dark:bg-rose-500 awesome-btn w-full text-center rounded-md py-3 text-white'
-              disabled={loading} // Disable button when loading
+              className='bg-info dark:bg-rose-500 w-full awesome-btn text-center rounded-md py-3 text-white'
             >
-              {loading ? ( // Show loading spinner or 'Continue' button text
+              {loading ? (
                 <TbFidgetSpinner size={24} className='m-auto animate-spin' />
               ) : (
                 'Continue'
@@ -186,11 +187,12 @@ const SignUp = () => {
           </p>
           <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
         </div>
+        <HandleGoogle />
         <p className='px-6 text-sm text-center text-slate-500 dark:text-white'>
           Already have an account?{' '}
           <Link
             to='/login'
-            className='hover:underline hover:text-info dark:hover:text-rose-500 dark:text-[#ddd] text-slate-600'
+            className='hover:underline  hover:text-info dark:hover:text-rose-500 dark:text-[#ddd] text-slate-600'
           >
             Login
           </Link>
@@ -201,4 +203,3 @@ const SignUp = () => {
 }
 
 export default SignUp
-// todo:some style modified
