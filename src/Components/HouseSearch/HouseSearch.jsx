@@ -21,7 +21,7 @@ const HouseSearch = () => {
   useEffect(() => {
     // fetchHouses();
     fetch("/public/houseData.json").then(response => response.json()).then(data => {
-      console.log(data)
+      // console.log(data)
       setHouses(data)
     }).catch(error => console.log(`404 page not found ${error}`))
   }, []);
@@ -54,7 +54,7 @@ const HouseSearch = () => {
     }
   };
 
-  console.log({ houses });
+  // console.log({ houses });
 
 
   return (
@@ -157,17 +157,6 @@ const HouseSearch = () => {
           </form>
           <div>
             <h3 className="text-2xl mb-2">Search Results:</h3>
-            {/* {houses?.houses?.map((house) => (
-              <div key={house.id} className="border p-4 mb-4">
-                <h4 className="text-lg mb-2">{house.title}</h4>
-                <p>City: {house.city}</p>
-                <p>Bedrooms: {house.bedrooms}</p>
-                <p>Bathrooms: {house.bathrooms}</p>
-                <p>Room Size: {house.roomSize}</p>
-                <p>Availability: {house.availability}</p>
-                <p>Rent per Month: {house.rentPerMonth}</p>
-              </div>
-            ))} */}
 
             {houses && houses?.length > 0 ? <>
               <div className='pt-12 grid grid-cols-1 sm:gird-cols-2 md:gird-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-8'>

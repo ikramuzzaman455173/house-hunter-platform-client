@@ -1,6 +1,6 @@
 //save a user to database
 export const savedUser =(user,image) => {
-  // console.log(user,'user');
+  console.log(user,'user');
   const currentUser = {
     email: user.email,
     name: user.name||user.displayName,
@@ -8,7 +8,7 @@ export const savedUser =(user,image) => {
     image,
   }
   // console.log(currentUser,'currentuser');
-  fetch(`${import.meta.env.server_url}/users`, {
+  fetch(`http://localhost:5000/users`, {
     method: 'POST',
     headers: {
       'content-type':'application/json'

@@ -63,7 +63,7 @@ const NavBar = () => {
               </li>
 
               <div className='flex gap-2 items-center md:ml-4 ml-0'>
-              <button className="login-btn" onClick={logOut()}>Log Out <MdLogout className='w-5 h-5 ml-2 -mr-1' /></button>
+              <button className="login-btn" onClick={logOut}>Log Out <MdLogout className='w-5 h-5 ml-2 -mr-1' /></button>
               <ImgTooltip/>
             </div>
             </>
