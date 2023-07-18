@@ -8,7 +8,9 @@ import { Helmet } from "react-helmet-async";
 import UseAuth from "../../Providers/UseAuth";
 import { savedUser } from "../../CommonApi/AuthUserApi";
 const Login = () => {
-  const { loading, setLoading, signIn } = UseAuth()
+  const { loading, setLoading, signIn, user } = UseAuth()
+  console.log({user});
+
   const navigate = useNavigate()
   const location = useLocation()
   const from = location.state?.from?.pathname || '/'

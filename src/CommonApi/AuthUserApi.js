@@ -6,6 +6,8 @@ export const savedUser =(user,image) => {
     name: user.name||user.displayName,
     role: 'user',
     image,
+    phoneNumber:user.mobile||user.phoneNumber
+
   }
   // console.log(currentUser,'currentuser');
   fetch(`http://localhost:5000/users`, {

@@ -38,11 +38,12 @@ const SignUp = () => {
       const imageUrl = result.data.url
       const user = await createUser(data.email, data.password)
       if (user) {
-        await updateUserProfile(data.name, imageUrl)
+        await updateUserProfile(data.name, imageUrl,data.mobile)
         setLoading(false)
         // console.log(`Sign Up Successfully !!!`);
         toast(`Sign Up Successfully !!!`, { autoClose: 2000 });
-        savedUser(data, imageUrl)
+        // console.log(data,imageUrl);
+        savedUser(data,imageUrl)
         setTimeout(() => {
           navigate(from, { replace: true })
         }, 3000);
