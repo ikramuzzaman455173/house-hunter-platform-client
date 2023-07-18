@@ -1,4 +1,5 @@
-[
+{
+  "houses": [
     {
       "id": 1,
       "name": "Mehedi Hasan",
@@ -338,8 +339,8 @@
       "bedrooms": 4,
       "bathrooms": 3,
       "roomSize": "1800 sqft",
-      "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/ef5464ea-5eb8-426a-a097-a4ed7a395610.jpeg?im_w=320",
-      "availabilityDate": "2023-09-02",
+      "picture": "https://a0.muscache.com/im/pictures/513bf16b-b908-47fa-a283-0f6ea14629fe.jpg?im_w=320",
+      "availabilityDate": "2023-09-01",
       "rentPerMonth": 16000,
       "phoneNumber": "+8801912345678",
       "description": "Modern house with a backyard garden."
@@ -350,14 +351,104 @@
       "email": "nadia2@example.com",
       "address": "432 Walnut Street",
       "city": "Rajshahi",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "roomSize": "1000 sqft",
+      "picture": "https://a0.muscache.com/im/pictures/dea84332-2f61-4b78-8c0b-156b3d30a69f.jpg?im_w=320",
+      "availabilityDate": "2023-08-28",
+      "rentPerMonth": 12000,
+      "phoneNumber": "+8801612345678",
+      "description": "Cozy house in a quiet neighborhood."
+      },
+      {
+      "id": 25,
+      "name": "Kamal Ahmed",
+      "email": "kamal2@example.com",
+      "address": "567 Maple Street",
+      "city": "Dhaka",
       "bedrooms": 3,
       "bathrooms": 2,
       "roomSize": "1500 sqft",
-      "picture": "https://a0.muscache.com/im/pictures/de7c5a34-ad95-4793-aae2-6f0317147438.jpg?im_w=320",
-      "availabilityDate": "2023-08-28",
+      "picture": "https://a0.muscache.com/im/pictures/5a8a4c27-18c1-42d5-aa60-d21e2195cbca.jpg?im_w=320",
+      "availabilityDate": "2023-09-04",
       "rentPerMonth": 14000,
-      "phoneNumber": "+8801612345678",
-      "description": "Well-maintained house in a quiet neighborhood."
+      "phoneNumber": "+8801512345678",
+      "description": "Spacious house with a garden."
+      },
+      {
+      "id": 26,
+      "name": "Farida Begum",
+      "email": "farida2@example.com",
+      "address": "234 Elm Street",
+      "city": "Chittagong",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "roomSize": "1000 sqft",
+      "picture": "https://a0.muscache.com/im/pictures/25cc50bf-4232-4f91-b247-409177506f59.jpg?im_w=320",
+      "availabilityDate": "2023-08-30",
+      "rentPerMonth": 12000,
+      "phoneNumber": "+8801212345678",
+      "description": "Cozy house in a residential area."
+      },
+      {
+      "id": 27,
+      "name": "Siddique Rahman",
+      "email": "siddique2@example.com",
+      "address": "789 Birch Street",
+      "city": "Sylhet",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "roomSize": "1500 sqft",
+      "picture": "https://a0.muscache.com/im/pictures/2e945b22-a84e-4d19-9869-ac65a0a997e5.jpg?im_w=320",
+      "availabilityDate": "2023-08-23",
+      "rentPerMonth": 13000,
+      "phoneNumber": "+8801312345678",
+      "description": "Spacious house with a backyard garden."
+      },
+      {
+      "id": 28,
+      "name": "Ayesha Khan",
+      "email": "ayesha2@example.com",
+      "address": "432 Cedar Street",
+      "city": "Rajshahi",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "roomSize": "1800 sqft",
+      "picture": "https://a0.muscache.com/im/pictures/c955f5eb-4bbf-4b59-a955-9468094676ea.jpg?im_w=320",
+      "availabilityDate": "2023-09-06",
+      "rentPerMonth": 16000,
+      "phoneNumber": "+8801412345678",
+      "description": "Modern house with a swimming pool."
+      },
+      {
+      "id": 29,
+      "name": "Jamil Hossain",
+      "email": "jamil2@example.com",
+      "address": "876 Poplar Street",
+      "city": "Dhaka",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "roomSize": "1100 sqft",
+      "picture": "https://a0.muscache.com/im/pictures/miso/Hosting-742424658135898180/original/ef5464ea-5eb8-426a-a097-a4ed7a395610.jpeg?im_w=320",
+      "availabilityDate": "2023-08-29",
+      "rentPerMonth": 13000,
+      "phoneNumber": "+8801012345678",
+      "description": "Cozy house in a residential area."
+      },
+      {
+      "id": 30,
+      "name": "Nazia Islam",
+      "email": "nazia2@example.com",
+      "address": "543 Chestnut Street",
+      "city": "Chittagong",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "roomSize": "1400 sqft",
+      "picture": "https://a0.muscache.com/im/pictures/de7c5a34-ad95-4793-aae2-6f0317147438.jpg?im_w=320",
+      "availabilityDate": "2023-09-02",
+      "rentPerMonth": 13500,
+      "phoneNumber": "+8801912345678",
+      "description": "Comfortable house in a family-friendly neighborhood."
       }
   ]
-
+}
