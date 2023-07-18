@@ -55,7 +55,7 @@ const SignUp = () => {
 
   return (
     <div className='flex justify-center items-center min-h-screen mt-5'>
-      <div className='flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-white shadow-md border-rose-500 dark:border-info border-2 text-slate-600  dark:bg-gradient-to-r dark:from-[#010314] dark:to-[#0f0728] dark:text-white dark:border-2'>
+      <div className='flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-white shadow-md border-rose-500 dark:border-info border-2 text-slate-600'>
         <div className='mb-8 text-center'>
           <h1 className='my-3 text-4xl font-bold dark:font-Merienda font-Pt'>Sign Up</h1>
         </div>
