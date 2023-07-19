@@ -16,19 +16,18 @@ const RenterDashboardNavLinks = () => {
         </label>
         {/* Menu Links */}
         <NavLink
-          to='select-classes'
+          to='my-bookings'
           className={({ isActive }) =>
             `d-nav-link ${isActive ? 'bg-warning dark:bg-info  text-gray-700 dark:text-white' : 'text-gray-600 dark:text-white'
             }`
           }
         >
           <MdClass className='w-5 h-5' />
-
-          <span className='mx-4 tracking-wider font-Pt dark:font-Merienda font-bold'>select classes</span>
+          <span className='mx-4 tracking-wider font-Pt dark:font-Merienda font-bold'>My Bookings</span>
       </NavLink>
 
         <NavLink
-          to='enrolled-classes'
+          to='buy-houses'
           className={({ isActive }) =>
             `d-nav-link ${isActive ? 'bg-warning dark:bg-info  text-gray-700 dark:text-white' : 'text-gray-600 dark:text-white'
             }`
@@ -36,7 +35,7 @@ const RenterDashboardNavLinks = () => {
         >
           <FaAngleDoubleRight className='w-5 h-5' />
 
-          <span className='mx-4 tracking-wider font-Pt dark:font-Merienda font-bold'>enrolled classes</span>
+          <span className='mx-4 tracking-wider font-Pt dark:font-Merienda font-bold'>buy-houses</span>
       </NavLink>
 
         <NavLink
