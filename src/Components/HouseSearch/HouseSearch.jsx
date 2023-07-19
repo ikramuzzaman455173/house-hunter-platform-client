@@ -3,6 +3,7 @@ import Container from '../SharedComponents/Container';
 import Heading from '../SharedComponents/Heading';
 import House from '../Houses/House';
 import moment from 'moment';
+import Pagination from '../SharedComponents/Pagination';
 
 const HouseSearch = () => {
   const [city, setCity] = useState();
@@ -14,7 +15,7 @@ const HouseSearch = () => {
   const [houses, setHouses] = useState([]);
   const [filteredHouses, setFilteredHouses] = useState([]);
   const [page, setPage] = useState(1)
-  const [limit, setLimit] = useState('')
+  const [limit, setLimit] = useState(10)
   const [totalItems, setTotalItems] = useState(0)
   console.log({page,limit,totalItems});
 
@@ -192,26 +193,8 @@ const HouseSearch = () => {
             )}
           </div>
         </div>
-        {/* ====pagintaiton part starts===== */}
-        <div className="flex justify-between items-center">
-        <div className="join text-center mx-20 my-20">
-          <button className="join-item btn" onClick={() => {
-            page === 1 ? setPage(1) : setPage(page - 1)
-          }} disabled={page === 1}>«</button>
-          <button className="join-item btn">Page {page}</button>
-          <button className="join-item btn" onClick={() => {
-            page === Math.round(totalItems / limit) ? setPage(Math.round(totalItems / limit)) : setPage(page + 1)
-          }} disabled={page === Math.round(totalItems / limit)}>»</button>
-        </div>
 
-        <select className="select select-success w-full max-w-xs mx-20" value={limit} onChange={e => setLimit(e.target.value)}>
-          <option value="">Select Show The View 1 Page Total Items?</option>
-          <option value="5">5</option>
-          <option value="10">10</option>
-          <option value="15">15</option>
-          <option value="20">20</option>
-        </select>
-      </div>
+        <Pagination page={page} setPage={setPage} totalItems={totalItems} limit={limit} setLimit={setLimit}/>
       </Container>
     </>
   );
