@@ -3,7 +3,6 @@ import Container from '../SharedComponents/Container';
 import Heading from '../SharedComponents/Heading';
 import House from '../Houses/House';
 import moment from 'moment';
-import Pagination from '../SharedComponents/Pagination';
 
 const HouseSearch = () => {
   const [city, setCity] = useState();
@@ -15,20 +14,31 @@ const HouseSearch = () => {
   const [houses, setHouses] = useState([]);
   const [filteredHouses, setFilteredHouses] = useState([]);
   const [page, setPage] = useState(1)
-  const [limit, setLimit] = useState(5)
+  const [limit, setLimit] = useState('')
   const [totalItems, setTotalItems] = useState(0)
+  console.log({page,limit,totalItems});
+
 
   const bangladeshiCities = ['Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi'];
   const priceRanges = ['0-500', '500-1000', '1000-1500'];
 
   useEffect(() => {
-    fetch('http://localhost:5000/allHouses?limit=${limit}&page=${page}')
+    fetch(`http://localhost:5000/totalHouse`)
+      .then(response => response.json())
+      .then(data => {
+        // console.log(data)
+        setTotalItems(data.count)
+      }).catch(error => console.log(`404 page not found ${error}`))
+  }, [])
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/allHouses?limit=${limit}&page=${page}`)
       .then((response) => response.json())
       .then((data) => {
         setHouses(data);
       })
       .catch((error) => console.log(`404 page not found ${error}`));
-  }, []);
+  }, [page, limit]);
 
   useEffect(() => {
     updateFilteredHouses();
@@ -182,7 +192,26 @@ const HouseSearch = () => {
             )}
           </div>
         </div>
-        <Pagination setPage={setPage} page={page} limit={limit} setLimit={setLimit} totalItems={totalItems} />
+        {/* ====pagintaiton part starts===== */}
+        <div className="flex justify-between items-center">
+        <div className="join text-center mx-20 my-20">
+          <button className="join-item btn" onClick={() => {
+            page === 1 ? setPage(1) : setPage(page - 1)
+          }} disabled={page === 1}>«</button>
+          <button className="join-item btn">Page {page}</button>
+          <button className="join-item btn" onClick={() => {
+            page === Math.round(totalItems / limit) ? setPage(Math.round(totalItems / limit)) : setPage(page + 1)
+          }} disabled={page === Math.round(totalItems / limit)}>»</button>
+        </div>
+
+        <select className="select select-success w-full max-w-xs mx-20" value={limit} onChange={e => setLimit(e.target.value)}>
+          <option value="">Select Show The View 1 Page Total Items?</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+      </div>
       </Container>
     </>
   );
