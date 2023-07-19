@@ -51,7 +51,7 @@ const House = ({ item }) => {
           if (data) {
             refetch();
             // console.log(data)
-            toast('You Are Select The Class !!!', { autoClose: 2000 })
+            toast('You Are Select Book This House !!!', { autoClose: 2000 })
           }
         })
         .catch(error => console.log(`404 page not found ${error.message}`));

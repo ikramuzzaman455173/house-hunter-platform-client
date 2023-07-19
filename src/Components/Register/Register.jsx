@@ -45,7 +45,8 @@ const SignUp = () => {
         // console.log(data,imageUrl);
         savedUser(data,imageUrl)
         setTimeout(() => {
-          navigate(from, { replace: true })
+          // navigate(from, { replace: true })
+          navigate('/dashboard')
         }, 3000);
       }
     } catch (error) {

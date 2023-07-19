@@ -28,7 +28,8 @@ const Login = () => {
         savedUser(result.user, result.user.photoURL)
         toast('LogIn Account Successfully !!!', { autoClose: 2000 })
         setTimeout(() => {
-          navigate(from, { replace: true })
+          // navigate(from, { replace: true })
+          navigate('/dashboard')
         }, 3000);
         setLoading(false)
       }).catch(error => {
