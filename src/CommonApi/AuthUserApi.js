@@ -1,6 +1,6 @@
 //save a user to database
 export const savedUser =(user,image) => {
-  console.log(user,'user');
+  // console.log(user,'user');
   const currentUser = {
     email: user.email,
     name: user.name||user.displayName,
@@ -9,7 +9,7 @@ export const savedUser =(user,image) => {
     phoneNumber:user.mobile||user.phoneNumber
   }
   // console.log(currentUser,'currentuser');
-  fetch(`http://localhost:5000/users`, {
+  fetch(`https://house-hunter-platform-server.vercel.app/users`, {
     method: 'POST',
     headers: {
       'content-type':'application/json'
@@ -18,6 +18,6 @@ export const savedUser =(user,image) => {
   })
     .then(response => response.json())
     .then(data => {
-      console.log(data)
+      // console.log(data)
     }).catch(error=>console.log(`404 page not found ${error}`))
 }

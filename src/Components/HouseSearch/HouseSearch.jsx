@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import moment from 'moment';
+import React, { useEffect, useState } from 'react';
+import House from '../Houses/House';
 import Container from '../SharedComponents/Container';
 import Heading from '../SharedComponents/Heading';
-import House from '../Houses/House';
-import moment from 'moment';
 import Pagination from '../SharedComponents/Pagination';
 
 const HouseSearch = () => {
@@ -24,7 +24,7 @@ const HouseSearch = () => {
   const priceRanges = ['0-500', '500-1000', '1000-1500'];
 
   useEffect(() => {
-    fetch(`http://localhost:5000/totalHouse`)
+    fetch(`https://house-hunter-platform-server.vercel.app/totalHouse`)
       .then(response => response.json())
       .then(data => {
         // console.log(data)
@@ -33,7 +33,7 @@ const HouseSearch = () => {
   }, [])
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allHouses?limit=${limit}&page=${page}`)
+    fetch(`https://house-hunter-platform-server.vercel.app/allHouses?limit=${limit}&page=${page}`)
       .then((response) => response.json())
       .then((data) => {
         setHouses(data);

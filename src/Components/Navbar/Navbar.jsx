@@ -36,7 +36,7 @@ const NavBar = () => {
         <Link to='/'>
           <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
             {/* <p className='text-4xl text-slate-500 hover:text-accent transition duration-300'><MdSmartToy /></p> */}
-            <img className='w-12' src="/src/assets/logo/logo.png" alt="site logo" />
+            <img className='w-12' src="https://househunter-e3d07.web.app/assets/logo-86142309.png" alt="site logo" />
             <h3 className='text-info'>House<span className='text-slate-500'>Hunter</span></h3>
           </div>
         </Link>

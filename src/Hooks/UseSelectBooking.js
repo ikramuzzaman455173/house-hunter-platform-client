@@ -9,7 +9,7 @@ const UseSelectBooking = () => {
     queryKey: ['renterBooking', user?.email],
     enabled: !loading && !!user?.email && !!localStorage.getItem("access-token"),
     queryFn: async () => {
-      const response = await axiosSecure(`http://localhost:5000/renterBooking?email=${user?.email}`)
+      const response = await axiosSecure(`https://house-hunter-platform-server.vercel.app/renterBooking?email=${user?.email}`)
       // console.log("response from axios",response.data);
       return response.data
     },

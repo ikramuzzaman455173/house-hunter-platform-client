@@ -1,13 +1,13 @@
-import { useEffect,useState } from 'react'
-import HeartButton from '../Button/HeartButton'
+import { useState } from 'react';
+import HeartButton from '../Button/HeartButton';
 // import { Link } from 'react-router-dom'
 import moment from 'moment';
 import { useLocation, useNavigate } from 'react-router-dom';
-import UseSelectBooking from '../../Hooks/UseSelectBooking';
-import UseAllUsers from '../../Hooks/UseAllusers';
-import UseAuth from '../../Providers/UseAuth';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
+import UseAllUsers from '../../Hooks/UseAllusers';
+import UseSelectBooking from '../../Hooks/UseSelectBooking';
+import UseAuth from '../../Providers/UseAuth';
 const House = ({ item }) => {
   const { user } = UseAuth();
   const { name,email, address, city, bedrooms, bathrooms, roomSize, picture, availabilityDate, rentPerMonth, phoneNumber, description, _id } = item || {}
@@ -19,7 +19,7 @@ const House = ({ item }) => {
   const currentUser = allUsers?.find(users => users?.email === user?.email)
   // console.log({allUsers,user});
   const myBookHouse = renterBooking?.filter(house => house?.email === user?.email)
-  console.log({myBookHouse});
+  // console.log({myBookHouse});
   const handleBookingHouse = (id) => {
     const houseBookingInfo = {
       bookingHouseId: id,
@@ -38,12 +38,12 @@ const House = ({ item }) => {
       rentPerMonth,
       description
     };
-    console.log({ id });
+    // console.log({ id });
     if (myBookHouse.length === 2||myBookHouse.length>2) {
       return toast('Sorry You Are Only Booking 2 Houses')
     }
     if (user?.email) {
-      fetch('http://localhost:5000/renterBooking', {
+      fetch('https://house-hunter-platform-server.vercel.app/renterBooking', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

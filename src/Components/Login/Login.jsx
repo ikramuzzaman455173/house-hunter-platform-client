@@ -9,7 +9,7 @@ import UseAuth from "../../Providers/UseAuth";
 import { savedUser } from "../../CommonApi/AuthUserApi";
 const Login = () => {
   const { loading, setLoading, signIn, user } = UseAuth()
-  console.log({ user });
+  // console.log({ user });
 
   const navigate = useNavigate()
   const location = useLocation()

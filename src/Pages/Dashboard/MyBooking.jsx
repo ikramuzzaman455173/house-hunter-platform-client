@@ -23,7 +23,7 @@ const MyBookings = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/renterBooking/${id}`, {
+        fetch(`https://house-hunter-platform-server.vercel.app/renterBooking/${id}`, {
           method: "DELETE",
           headers: {
             'content-type': 'application/json'

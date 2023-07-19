@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import UseAuth from '../Providers/UseAuth';
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://house-hunter-platform-server.vercel.app',
 });
 
 const useAxiosSecure = () => {
