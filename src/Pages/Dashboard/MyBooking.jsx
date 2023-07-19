@@ -23,7 +23,7 @@ const MyBookings = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/${id}`, {
+        fetch(`http://localhost:5000/renterBooking/${id}`, {
           method: "DELETE",
           headers: {
             'content-type': 'application/json'

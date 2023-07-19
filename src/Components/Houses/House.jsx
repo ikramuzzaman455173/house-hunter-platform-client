@@ -13,12 +13,13 @@ const House = ({ item }) => {
   const { name,email, address, city, bedrooms, bathrooms, roomSize, picture, availabilityDate, rentPerMonth, phoneNumber, description, _id } = item || {}
   const navigate = useNavigate();
   const location = useLocation();
-  const [, refetch] =UseSelectBooking();
+  const [renterBooking, refetch] =UseSelectBooking();
   const [isSelectDisabled, setIsSelectDisabled] = useState(false);
   const [allUsers] = UseAllUsers()
   const currentUser = allUsers?.find(users => users?.email === user?.email)
   // console.log({allUsers,user});
-
+  const myBookHouse = renterBooking?.filter(house => house?.email === user?.email)
+  console.log({myBookHouse});
   const handleBookingHouse = (id) => {
     const houseBookingInfo = {
       bookingHouseId: id,
@@ -37,7 +38,10 @@ const House = ({ item }) => {
       rentPerMonth,
       description
     };
-    console.log({id});
+    console.log({ id });
+    if (myBookHouse.length === 2||myBookHouse.length>2) {
+      return toast('Sorry You Are Only Booking 2 Houses')
+    }
     if (user?.email) {
       fetch('http://localhost:5000/renterBooking', {
         method: 'POST',
@@ -70,9 +74,6 @@ const House = ({ item }) => {
       });
     }
   };
-  // useEffect(() => {
-  //   setIsSelectDisabled(currentUser?.role === 'admin' || currentUser?.email===user?.email);
-  // }, [ user, _id]);
   return (
     // <Link to={`room/${1}`}>
     <div className='col-span-1 cursor-pointer group'>
