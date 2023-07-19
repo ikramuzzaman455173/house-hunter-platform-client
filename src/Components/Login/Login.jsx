@@ -25,7 +25,7 @@ const Login = () => {
       .then(result => {
         // console.log(result.user);
         // save user to db
-        savedUser(result.user, result.user.photoURL,mobile)
+        savedUser(result.user, result.user.photoURL)
         toast('LogIn Account Successfully !!!', { autoClose: 2000 })
         setTimeout(() => {
           navigate(from, { replace: true })
@@ -107,9 +107,9 @@ const Login = () => {
         </div> */}
         <div className='flex items-center pt-4 space-x-1'>
           <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
-          <p className='px-3 text-sm dark:text-white'>
+          {/* <p className='px-3 text-sm dark:text-white'>
             Login with social accounts
-          </p>
+          </p> */}
           <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
         </div>
         <p className='px-6 text-sm text-center text-gray-400 dark:text-white'>

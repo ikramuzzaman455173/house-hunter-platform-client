@@ -1,9 +1,72 @@
-import React from 'react'
+import { useEffect,useState } from 'react'
 import HeartButton from '../Button/HeartButton'
 // import { Link } from 'react-router-dom'
 import moment from 'moment';
+import { useLocation, useNavigate } from 'react-router-dom';
+import UseSelectBooking from '../../Hooks/UseSelectBooking';
+import UseAllUsers from '../../Hooks/UseAllusers';
+import UseAuth from '../../Providers/UseAuth';
 const House = ({ item }) => {
-  const { name, address, city, bedrooms, bathrooms, roomSize, picture, availabilityDate, rentPerMonth, phoneNumber, description } = item || {}
+  const { user } = UseAuth();
+  const { name, address, city, bedrooms, bathrooms, roomSize, picture, availabilityDate, rentPerMonth, phoneNumber, description, id } = item || {}
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [, refetch] =UseSelectBooking();
+  const [isSelectDisabled, setIsSelectDisabled] = useState(false);
+  const [allUsers] = UseAllUsers()
+  // const currentUser = allUsers?.find(users => users?.email === user?.email)
+  // console.log({allUsers,user});
+
+  const handleBookingHouse = (id) => {
+    // const SelectClassInfo = {
+    //   selectClassId: id,
+    //   class_name,
+    //   image,
+    //   class_level,
+    //   price,
+    //   class_duration,
+    //   instructor_name,
+    //   email: user?.email,
+    //   instructor_email: email,
+    //   payment: false,
+    //   students
+    // };
+
+    // if (user?.email) {
+    //   fetch('http://localhost:5000/renterBooking', {
+    //     method: 'POST',
+    //     headers: {
+    //       'content-type': 'application/json'
+    //     },
+    //     body: JSON.stringify(houseBookingInfo)
+    //   })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       if (data) {
+    //         refetch();
+    //         // console.log(data)
+    //         toast('You Are Select The Class !!!', { autoClose: 2000 })
+    //       }
+    //     })
+    //     .catch(error => console.log(`404 page not found ${error.message}`));
+    // } else {
+    //   Swal.fire({
+    //     title: 'Please login to select the class',
+    //     icon: 'warning',
+    //     showCancelButton: true,
+    //     confirmButtonColor: '#3085d6',
+    //     cancelButtonColor: '#d33',
+    //     confirmButtonText: 'Login Now'
+    //   }).then(result => {
+    //     if (result.isConfirmed) {
+    //       navigate('/login', { state: { from: location } });
+    //     }
+    //   });
+    // }
+  };
+  // useEffect(() => {
+  //   setIsSelectDisabled(available_seats === 0 || currentUser?.role === 'admin' || currentUser?.role === 'instructor');
+  // }, [available_seats, user, _id]);
   return (
     // <Link to={`room/${1}`}>
     <div className='col-span-1 cursor-pointer group'>
@@ -55,6 +118,7 @@ const House = ({ item }) => {
           <div className='font-light mb-4'>{roomSize}</div>
         </div>
         <button
+          onClick={() => handleBookingHouse(_id)}
           type="submit"
           className="bg-blue-500 text-white px-10 py-2 rounded mt-auto awesome-btn"
         >

@@ -10,7 +10,7 @@ import {
   updateProfile,
 } from 'firebase/auth';
 import { createContext, useEffect, useState } from 'react';
-import { app } from '../Firebase/firebase.config';
+import { app } from "../Firebase/firebase.config";
 
 export const AuthContext = createContext()
 
@@ -60,9 +60,9 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser)
       // console.log('currentUser',currentUser);
       if (currentUser) {
-        axios.post('https://summer-camp-school-server-two.vercel.app/jwt', { email: currentUser?.email })
+        axios.post('http://localhost:5000/jwt', { email: currentUser?.email })
           .then(data => {
-            // console.log(data.data.token);
+            console.log(data.data.token);
             if (data?.data) {
               localStorage.setItem('access-token', data?.data?.token)
               setLoading(false)

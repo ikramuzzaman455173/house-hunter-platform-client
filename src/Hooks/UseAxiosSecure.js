@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import UseAuth from './UseAuth';
+import UseAuth from '../Providers/UseAuth';
 
 const axiosSecure = axios.create({
-  baseURL: 'https://summer-camp-school-server-two.vercel.app',
+  baseURL: 'http://localhost:5000',
 });
 
 const useAxiosSecure = () => {

@@ -17,7 +17,7 @@ const HouseSearch = () => {
   const [page, setPage] = useState(1)
   const [limit, setLimit] = useState(10)
   const [totalItems, setTotalItems] = useState(0)
-  console.log({page,limit,totalItems});
+  // console.log({page,limit,totalItems});
 
 
   const bangladeshiCities = ['Dhaka', 'Chittagong', 'Sylhet', 'Rajshahi'];
@@ -47,31 +47,31 @@ const HouseSearch = () => {
 
   const updateFilteredHouses = () => {
     let filteredHouses = houses;
-    console.log({ filteredHouses });
+    // console.log({ filteredHouses });
 
     if (city) {
       filteredHouses = filteredHouses.filter((house) => house.city === city);
-      console.log({ filteredHouses });
+      // console.log({ filteredHouses });
 
     }
     if (bedrooms) {
       filteredHouses = filteredHouses.filter((house) => house.bedrooms === parseInt(bedrooms));
-      console.log({ filteredHouses });
+      // console.log({ filteredHouses });
 
     }
     if (bathrooms) {
       filteredHouses = filteredHouses.filter((house) => house.bathrooms === parseInt(bathrooms));
-      console.log({ filteredHouses });
+      // console.log({ filteredHouses });
 
     }
     if (roomSize) {
       filteredHouses = filteredHouses.filter((house) => house.roomSize === parseInt(roomSize));
-      console.log({ filteredHouses });
+      // console.log({ filteredHouses });
 
     }
     if (availability) {
       filteredHouses = filteredHouses.filter((house) => house.availabilityDate === availability);
-      console.log({ filteredHouses });
+      // console.log({ filteredHouses });
 
     }
     if (rentPerMonth) {
@@ -81,7 +81,7 @@ const HouseSearch = () => {
         return rent >= parseInt(minPrice) && (rent <= parseInt(maxPrice) || maxPrice === undefined);
       });
     }
-    console.log({ filteredHouses });
+    // console.log({ filteredHouses });
     setFilteredHouses(filteredHouses);
   };
 

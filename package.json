@@ -29,7 +29,7 @@
     "react-toggle-dark-mode": "^1.1.1",
     "react-tooltip": "^5.18.0",
     "sort-by": "^1.2.0",
-    "sweetalert2": "^11.7.5"
+    "sweetalert2": "^11.7.18"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

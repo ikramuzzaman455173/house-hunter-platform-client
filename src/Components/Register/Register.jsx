@@ -209,9 +209,9 @@ const SignUp = () => {
         </form>
         <div className='flex items-center pt-4 space-x-1'>
           <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
-          <p className='px-3 text-sm text-slate-600 dark:text-white dark:font-Merienda font-Pt tracking-wider'>
+          {/* <p className='px-3 text-sm text-slate-600 dark:text-white dark:font-Merienda font-Pt tracking-wider'>
             Signup with social accounts
-          </p>
+          </p> */}
           <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
         </div>
         <p className='px-6 text-sm text-center text-slate-500 dark:text-white'>
