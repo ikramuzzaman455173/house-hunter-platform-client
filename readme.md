@@ -13,13 +13,16 @@ Owner Email: mehedi@example.com
 Owner Password: Asd#123
 +8801712345678
 
+```
+
+<!--
 Log In Admin Dashboard:
 =======================
 Admin Email: admin123@gmail.com
 Password: Admin#123
+-->
 
-```
-
+<!--
 ### My Fault Or Mistake
 
 **I Can Mail That Sir But You Are No Reply My Mail But I Am Truely Said That My Project Firebase Use This Is My Big Mistakes But I Have No Other Choise Sir**
@@ -28,7 +31,7 @@ My Mail:
 ========
 Sir we are told to create authentication by ourselves not to use firebase or any provider but sir I tried for several hours but I can't do the custom authentication system with my code complex but sir after understanding the logic completely I have many problems to do this happened Can I complete the whole project using firebase sir? Sir please kindly tell me a little about the matter. Sir, I will be able to implement all the futures inshallah.
 
-
+-->
 ### About the Project
 
 This project is a Marn STACK House Sell Or Rent Related website with a clean and modern design that includes various components, such as a responsive navbar, a slider, modern footer, a contact form, and more. It was developed using Reactjs, TailwindCSS, css and also many other react npm packages making it easy to customize and adapt to different needs.
